@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+import Detalle from './views/detalle.vue'
 
 Vue.use(Router)
 
@@ -14,7 +15,12 @@ export default new Router({
       component: Home
     },
     {
-      path: '/about',
+      path: '/detalle',
+      name: 'detalle',
+      component: Detalle
+    },
+    {
+      path: '/busqueda',
       name: 'about',
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route

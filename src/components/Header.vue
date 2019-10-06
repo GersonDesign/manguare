@@ -1,21 +1,15 @@
 <template lang="pug">
-  v-app
-    router-view
+  header
+    img(src="../assets/img/header.jpeg", style="width:100%;")
 </template>
 
 <script>
-
 export default {
-  name: 'App',
   data: () => ({
-    //
+
   }),
 };
 </script>
 <style lang="stylus">
-  .v-application
-    background white!important
-   img
-     max-width 100%
-   
+  
 </style>
