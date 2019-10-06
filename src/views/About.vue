@@ -20,10 +20,12 @@
                   <strong>TÉRMINO:</strong> {{item.Nombre}}
               v-layout.itemT
                 p
-                  <strong>CONCEPTO:</strong> {{item.Descrip}}
+                  <strong>CONCEPTO:</strong>
+              p(style="font-size:18px!important;") {{item.Descrip}}
               v-layout.itemT
                 p
-                  <strong>IMPACTO:</strong> {{item.Impacto}}
+                  <strong>IMPACTO:</strong>  <span v-html="item.imgImpacto"></span>
+              p(style="font-size:18px!important;") {{item.Impacto}}
               v-btn(color="primary",@click="verDetalle(item.Codigo, item)") Ver los detalles
       .col-lg-3.lateral(style="padding:30px;")
         section
@@ -48,104 +50,18 @@ export default {
         {
         "Codigo": 1,
         "Nombre": "Animales en Peligro",
-        "Descrip": "",
-        "Impacto": "No Favorable",
-        "Tipo Fuente": "Texto",
-        "Descripcion": {
-            "Estado": [{
-              "En peligro": [
-                {
-                  "Nombre": "Gato andino (Leopardus jacobita)",
-                  "Foto":" "
-                },
-                {
-                  "Nombre": "Jaguar (Panthera onca)",
-                  "Foto":" "
-                },
-                {
-                  "Nombre": "Lemur de collar blanco (Eulemur cinereiceps)",
-                  "Foto":" "
-                },
-                {
-                  "Nombre": "Nutria gigante (Pteronura brasiliensis)",
-                  "Foto":" "
-                },
-                {
-                  "Nombre": "Tapir (Tapirus sp.)",
-                  "Foto":" "
-                }
+        "Descrip": "Especies de animales que pueden desaparecer, por la baja cantidad de individuos que se encuentran en cierta area natural. Esto se ocasiona por  la  eliminacion de su lugar de vida  y de su alimento.",
+        "Impacto": "Perdida de los otros tipos de animales o permitir que otra especie aumente de indiviudos de manera rapida.",
+        "imgImpacto": "<span style='color:red;'> NEGATIVO</span>",
+        "Tipo Fuente": "Texto"
 
-              ],
-              "En peligro critico": [
-                {
-                  "Nombre": "Chinchilla de cola larga (Chinchilla lanigera)",
-                  "Foto":" "
-                },
-                {
-                  "Nombre": "Monos choro de cola amarilla (Oreonax flavicauda)",
-                  "Foto":" "
-                },
-                {
-                  "Nombre": "Rana arlequín (Atelopus varius )",
-                  "Foto":" "
-                },
-                {
-                  "Nombre": "Sapo de Perú o Peru stubfoot toad ( Atelopus peruensis)",
-                  "Foto":" "
-                }
-
-              ],
-              "Extinto": [
-                {
-                  "Nombre": "Loro del paraíso (Psephotus pulcherrimus)",
-                  "Foto":" "
-                },
-                {
-                  "Nombre": "Sapo Dorado de Monteverde(Bufo periglenes)",
-                  "Foto":" "
-                }
-              ],
-              "Extinto en estado salvaje": [
-                {
-                  "Nombre": "Rana Darwin de Chile (Rhinoderma rufum)",
-                  "Foto":" "
-                }
-              ],
-
-              "Vulnerable": [
-                {
-                  "Nombre": "Armadillo gigante o tatu carreta (Priodontes maximus)",
-                  "Foto": ""
-                },{
-                  "Nombre": "Cocodrilo americano (Crocodylus acutus)",
-                  "Foto": ""
-                }
-                ,{
-                  "Nombre": "Delfín rosado (Inia geoffrensis)",
-                  "Foto": ""
-                },
-                {
-                  "Nombre": "Flamenco andino (Phoenicopterus andinus)",
-                  "Foto": ""
-                },
-                {
-                  "Nombre": "Guacamayo verde (Ara militaris)",
-                  "Foto": ""
-                },
-                {
-                  "Nombre": "Oso de anteojos (Tremarctos ornatus)",
-                  "Foto": ""
-                }
-              ]
-
-            }]
-        }
         },
         {
           "Codigo": 2,
           "Nombre": "Consulta Previa",
-          "Descrip": "",
-          "Impacto": "Favorable",
+          "Descrip": "Derecho de lo pueblos indigenas que permite participar y conversar con el gobierno nacional en la toma de decisiones, con el apoyo de traductores;  antes de aprobar normas legales y proyectos que beneficien o perjudiquen  a su comunidad.",
+          "Impacto": "Facilita la comunicación entre el gobierno nacional y los pueblos indigenas; para reducir  problemas sociales y ambientales.",
+          "imgImpacto": "<span style='color:#3DB39E;'> POSITIVO</span>",
           "Tipo Fuente": "Excel",
           "Descripcion": [
             {
@@ -612,49 +528,20 @@ export default {
         {
           "Codigo": 3,
           "Nombre": "Deforestación",
-          "Imagen": "",
-          "Impacto": "No Favorable",
-          "Tipo Fuente": "Grafica",
-          "Descripcion": {
-            "Fuente": "I-TERRA",
-            "Tiempo": [
-              {
-                "2010": "3,985.04"
-              },
-              {
-                "2011": "1,622.32"
-              },
-              {
-                "2012": "2,278.35"
-              },
-              {
-                "2013": "1,365.86"
-              },
-              {
-                "2014": "5,468.79"
-              },
-              {
-                "2015": "1,336.57"
-              },
-              {
-                "2016": "37,012.88"
-              },
-              {
-                "2017": "4,097.74"
-              },
-              {
-                "2018": "713.8"
-              }
+          "Descrip": "Eliminacion de un grupo de arboles o bosques para realizar diferentes actividades en el suelo despejado, por ejemplo: ganaderia, agricultura",
 
-            ]
-          }
+          "Impacto": "Perdida de especies de animales y plantas, bajas reservas de agua, desgaste del suelo.",
+          "imgImpacto": "<span style='color:red;'> NEGATIVO</span>",
+          "Tipo Fuente": "Grafica",
+          
         },
 
         {
           "Codigo":4,
           "Nombre": "Tala Ilegal",
-          "Descrip": "",
-          "Impacto": "No Favorable",
+          "Descrip": "Corte de arboles que se realiza muy cerca de las raices, que no tiene los permisos dado por el gobierno nacional.",
+          "Impacto": "Perdida de los beneficios que nos da los arboles: oxigeno, perdida de paisajes, pérdida de especies de animales, etc. ",
+          "imgImpacto": "<span style='color:red;'> NEGATIVO</span>",
           "Tipo Fuente": "Otro",
 
         }
