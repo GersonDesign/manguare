@@ -1,29 +1,24 @@
-# plataformahackaton
+# Manguare
 
-## Project setup
+## Configuración del proyecto
 ```
 yarn install
 ```
-
-### Compiles and hot-reloads for development
+### Desplegar la aplicación web en modo Desarrollo
 ```
 yarn run serve
 ```
-
-### Compiles and minifies for production
+### Desplegar la aplicación web en modo Producción
 ```
 yarn run build
 ```
+## ElectronJS
 
-### Run your tests
+### Desplegar la aplicación escritorio en modo Desarrollo
 ```
-yarn run test
+yarn electron:serve
 ```
-
-### Lints and fixes files
+### Desplegar la aplicación escritorio en modo Producción
 ```
-yarn run lint
+yarn electron:build
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
